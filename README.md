@@ -6,4 +6,6 @@ totalmente non facile.
 Corso di Programmazione 1 - UniPD.
 Può essere molto utile.
 
+Ci sono anche tutti gli esercizi presenti per l'anno 2020/2021 del corso.
+
 Enjoy!
