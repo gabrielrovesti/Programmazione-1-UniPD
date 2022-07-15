@@ -1,0 +1,155 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+
+void winner(int B[][7], int player,int &vincitore) //decreta il vincitore confrontando le due buche grandi
+{if(B[player][6]>B[(player+1)%2][6])
+    vincitore=player;
+  else
+    vincitore=(player+1)%2;
+}
+
+void svuota_buche(int B[][7], int player)//viene chiamata quando uno dei due giocatori ha le buche piccole vuote e per cui l'altro deve svuotare le sue buche e metterne il contenuto nella propria buca grande
+{int fagiolini=0;
+  for(int i=0; i<6; i++)
+    {fagiolini=fagiolini+B[player][i];
+      B[player][i]=0;
+    }
+  
+  B[player][6]=B[player][6]+fagiolini;
+}
+
+bool controllo_buche(int B[][7],int player) //controlla ad ogni mossa fatta se uno dei due giocatori presenta tutte le buche piccole vuote
+{int indexbuca=0;
+  bool vuota=true;
+  
+  while(indexbuca<6 && vuota==true)
+    { if(B[player][indexbuca]!=0)
+	vuota=false;
+      else
+	indexbuca++;
+    }
+  return vuota;
+  
+}
+
+void stampaschermo(int B[][7]) //stampa su schermo le varie mosse
+{cout<<"\t";
+  for(int k=5; k>=0; k--)
+    cout<< "|"<< B[0][k]<<"|"<<"  ";
+  cout<<endl;
+  cout<<"|"<<B[0][6]<<"|"<<"\t"<<"                                   "<< "|"<<B[1][6]<<"|"<<endl;
+  cout<< "\t";
+  for(int k=0; k<=5; k++)
+    cout<< "|"<< B[1][k]<<"|"<<"  ";
+  cout<<endl;
+}
+
+void stampaOUT(int B[][7], ofstream &OUT) //stampa su file "output"
+{ for (int j=6;j>=0;j--) 
+    OUT<<B[0][j]<<" ";
+  OUT<<endl;
+  for(int i=0;i<7;i++)
+    OUT<<B[1][i]<<" ";
+  OUT<<endl;
+}
+
+void inizializza(int B[][7], ifstream &IN) //inizializza l'array B alla sua configurazione di gioco iniziale
+{for(int i=0;i<2;i++) 
+    for(int j=0;j<7;j++)
+      IN>>B[i][j];
+}
+
+
+
+void turno_player(int B[][7], int buca,int player, int & bucafinale) // viene effettuata la mossa corrente dal giocatore giusto con un controllo finale per stabilire se deve cambiare il giocatore al turno successivo
+{int indice;//inizializzato cosi' per esser sicuro
+  int contenuto_buca= (B[player][buca]);
+  B[player][buca]=0;
+  bool campo_gioco=player;
+
+  while(contenuto_buca>0)
+    {for (int i=buca+1; i<7 && contenuto_buca>0; i++) 
+	{contenuto_buca--;
+	  B[player][i]=(B[player][i])+1;
+	  indice=i;
+	  campo_gioco=player;
+	}
+      for(int j=0; j<6 && contenuto_buca>0; j++)
+	{contenuto_buca--;
+	  B[(player+1)%2][j]=(B[(player+1)%2][j])+1;
+	  indice=j;
+	  campo_gioco=(player+1)%2;
+	  
+	}
+       buca=-1;
+    }
+  bucafinale=indice;
+ 
+  if(B[campo_gioco][bucafinale]==1 && bucafinale!=6) //vuol dire che prima era vuota, ma devono esser controllate solo le buche piccole
+    {B[campo_gioco][bucafinale]=0;
+      B[player][6]=B[player][6]+B[(campo_gioco+1)%2][5-bucafinale]+1;
+      B[(campo_gioco+1)%2][5-bucafinale]=0;
+    }
+
+}
+
+
+
+main()
+{ifstream IN ("input");
+  ofstream OUT ("output");
+  if (IN && OUT)
+    {int B[2][7];
+      inizializza(B, IN);
+      stampaschermo(B);
+
+      int player, mossa, bucafinale, vincitore;    
+      IN>>player>>mossa; 
+      
+      bool fine_gioco=false;
+      bool controlloplayer;
+      bool controlloavversario;
+      
+      while(fine_gioco==false && mossa!=-1) //il ciclo continua finchè non si legge una mossa=-1 oppure quando uno dei due giocatori presenta le buche piccole vuote
+	{turno_player(B, mossa,player, bucafinale);
+	 
+	  OUT<<player<<" "<<mossa<<endl;
+	  cout<<player<<" "<<mossa<<endl;
+	  stampaOUT(B, OUT);
+	  stampaschermo(B);
+	  
+	  controlloplayer=controllo_buche(B, player);
+	  controlloavversario=controllo_buche(B, (player+1)%2);
+	  fine_gioco=controlloplayer || controlloavversario; //se uno (almeno uno) dei due giocatori ha le buche piccole vuote allora fine_gioco sarà true e si uscirà dal ciclo, altrimenti rimarrà false
+	  
+	  if(fine_gioco==false) //se nessuno dei due giocatori ha le buche vuote allora si legge la prossima mossa da input
+	    IN>>mossa;
+	  else
+	    {if(controlloplayer==true)  
+		svuota_buche(B, (player+1)%2);
+	      else
+		svuota_buche(B,player);
+	    }
+	 	  
+	  if(bucafinale!=6) //serve per vedere se alla fine di una mossa il giocatore attuale ha messo l'ultimo fagiolo nella sua buca grande, in tal caso rimane ancora a lui il turno, altrimenti passa all'avversario
+	    player=(player+1)%2;
+	  
+	}
+      
+      if(fine_gioco==true) //si decreta il vincitore dal momento che uno dei due giocatori ha le buche piccole vuote
+	{stampaschermo(B);
+	  winner(B,player,vincitore);
+	  OUT<<"ha vinto il giocatore "<<vincitore<<endl;
+	  cout<<"ha vinto il giocatore "<<vincitore<<endl;
+	}
+      
+    }
+  
+  
+  else
+    OUT<<"errore apertura file"<<endl;
+  IN.close();
+  OUT.close();
+}

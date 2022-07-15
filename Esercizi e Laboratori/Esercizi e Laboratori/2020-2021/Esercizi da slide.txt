@@ -1,0 +1,95 @@
+Da slide 17:
+
+Definite una funzione ricorsiva che stampi i 
+nodi di un albero secondo il percorso in 
+larghezza
+
+void print_breadth(nodo *T, int k){
+    if(!T)  {cout<<"Albero vuoto"<<endl; return;}
+    if(k==1)    cout<<"Albero percorso del tutto";
+    print_breadth(T->left, k-1);
+    print_breadth(T->right, k-1);
+}
+
+Da slide 18:
+
+Altra soluzione più efficiente:
+Inutile cercare a profondità k se abbiamo già 
+trovato una foglia a profondità minore o 
+uguale di k
+usiamo il passaggio per riferimento per fare 
+in modo che tutte le funzioni invocate 
+condividano una variabile di tipo foglia che, 
+in ogni momento del calcolo, contenga la 
+migliore foglia incontrata fino a quel 
+momento:
+
+(Si noti come la struttura sia: struct foglia{nodo* fo; int prof;})
+
+void prof_min(nodo*r, int prof, foglia & m){
+    if(!r)  return;
+    int depth=0;
+    if(!r->left && !r->right) fo=new foglia(fo, r->prof+1);
+    prof_min(r->left, prof+1, m(0, prof));
+    prof_min(r->right, prof+1, m(0, prof));
+}
+
+Da slide 19:
+
+Inserimento in un BST di tipo 3 e ricorsiva (essendo per riferimento la cosa è più efficiente,
+perché alla fine della ricorsione torno indietro con quello che ho in quel momento)
+
+void insert(nodo*& r, int k){
+    if(!r)  return;
+    if(r->info >= y){
+        insert(r->left, y);
+    }
+    else{
+        insert(r->left, y);
+    }
+}
+
+Da slide 6:
+
+int k=5, *z=&k; 
+*f(&z)=k+5;
+cout<<*z <<endl;
+vogliamo una f() t. c. stampi 10
+
+Da slide 8:
+
+Sia int A[6][8];
+leggi(*A, 28);
+
+Avremo 3 righe piene e la quarta con 4 valori
+
+E se volessimo calcolare la matrice B di bool?
+
+Soluzione: basta calcolarsi a parte le righe piene 
+con una variante meno contorta di strati, fette e compagnia. 
+
+void riempi(bool* B){
+    int cols=0, int rows=0;
+    elements(A, &nrows, &ncols);
+    for(int i=0; i<nrows; i++){
+        for(int j=0; j<ncols; j++)
+        B[i][j]=1;
+    }
+}
+
+void elements(int (*A)[8], int nrows, int ncols){
+    int nelem=6*8;
+    int nrows=nelem%8;
+    int ncols=nelem/8;
+}
+
+Le seguenti funzioni sono corrette o sbagliate?
+
+int *& f (int *& x, int & y) {x=&y; return x;}
+La funzione è corretta, in quanto il valore puntato
+è plausibile essendo già presente dall'altra parte
+
+int *& f (int ** x) {int b=5; *x=&b; return *x;}
+La funzione è sbagliata, in quanto si punta ad 
+un locale che viene eliminato alla fine della funzione
+e quindi si ha il solito dangling pointer.

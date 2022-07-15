@@ -1,0 +1,14 @@
+anche quest'anno è stato asssegnato un progetto di programmazione sulla realizzazione di un semplice Bantumi
+vedi:
+- https://it.wikipedia.org/wiki/Kalah
+- https://en.wikipedia.org/wiki/Kalah
+- http://mancala.wikia.com/wiki/Kalah
+
+diviso in 3+1 parti
+le prime 3 da svolgere durante il corso come esercizi settimanali (II semestre)
+l'ultima è facoltativa per alcuni punti bonus sul voto finale (max 3)
+
+
+ATTENZIONE:
+le regole richieste si discostano leggermente da quelle del bantumi "classico",
+e soo espresse nei vari .pdf delle 4 parti.

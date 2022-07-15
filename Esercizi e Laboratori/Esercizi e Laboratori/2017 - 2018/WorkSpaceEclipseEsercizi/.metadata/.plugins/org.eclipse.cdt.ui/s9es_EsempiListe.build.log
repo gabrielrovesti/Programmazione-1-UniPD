@@ -1,0 +1,7 @@
+17:14:05 **** Rebuild of configuration Debug for project s9es_EsempiListe ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s9es_EsempiListe.o" "..\\src\\s9es_EsempiListe.cpp" 
+g++ -o s9es_EsempiListe.exe "src\\s9es_EsempiListe.o" 
+
+17:14:05 Build Finished (took 778ms)
+

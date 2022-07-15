@@ -1,0 +1,24 @@
+3 4 5
+48
+1  2  1  0  0
+0  0  1  1  1
+1  1  0  0  0
+0  2  1  2  1
+1  2  2  3  1
+0  0  2  1  0
+1  1  2  0  1
+1  2  1  2  0
+0  2  0  1  1
+1  0  1
+3
+1 0 1
+
+
+
+##############
+Expected Output:
+V-fetta 0=3 match
+V-fetta 1=0 match
+V-fetta 2=2 match
+V-fetta 3=0 match
+V-fetta 4=2 match

@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std;
+
+struct nodo{
+	int n;
+	char info;
+	nodo*left,*right;
+	nodo(char b=0, nodo*c=0, nodo*d=0, int e=0){
+		n=e;
+		info=b;
+		left=c;
+		right=d;
+	}
+};
+
+void completa(nodo*r);
+nodo* cerca1_infix(nodo*r, int& k, int *C);
+nodo* cerca2_infix(nodo* r, int k, int *C) ;
+int main() {
+	cout << "!!!Hello World!!!" << endl; // prints !!!Hello World!!!
+	return 0;
+}
+//PRE=(albero(r) corretto, k>=1, C è un array di interi con un numero di elementi maggiore della profondità di albero(r), vk = k)
+nodo* cerca1_infix(nodo*r, int& k, int *C){
+
+	if(!r) return 0;
+
+	nodo* node=0;
+
+	node = cerca1_infix(r->left,k,C);
+	if(!node) *C=0;
+
+	if(k==1){
+		return r;
+	}else{
+		k--;
+	}
+	node= cerca1_infix(r->left, k, C+1);
+
+	if(node) C[0]=1;
+	return node;
+}
+//POST=(se albero(r) ha almeno k nodi, allora la funzione restituisce col return il nodo k rispetto all’ordine infisso dei suoi nodi,
+//	e inoltre in C restituisce il cammino che da r porta a questo nodo) && (se invece albero(r) ha, diciamo, m nodi, con m <k,
+//	allora il valore finale di k sarà vk-m e la funzione restituisce 0 col return)
+
+
+//PRE=(albero(r) è corretto, valbero(r)=albero(r))
+void completa(nodo*r){
+
+	int nodiRadici=0;
+	if(r->left && r->right){
+
+		completa(r->left);
+		completa(r->right);
+		nodiRadici= r->right->n + r->left->n;
+	}else if(r->left){
+
+		completa(r->left);
+		nodiRadici+=r->left->n;
+	}else if(r->right){
+		completa(r->right);
+		nodiRadici+=r->right->n;
+	}
+
+	r->n=nodiRadici+1;
+
+}
+//POST=(albero(r) ha la stessa struttura di valbero(r),
+//ma ogni nodo contiene nel campo n il numero di nodi del sottoalbero radicato in quel nodo, compreso il nodo stesso)
+
+
+//PRE=(albero(r) è corretto e ogni suo nodo x contiene nel suo campo n il n. di nodi del sottoalbero radicato in x,
+//1<=k <= r ->n, C è un array di interi con un numero di elementi maggiore della profondità di albero(r))
+
+nodo* cerca2_infix(nodo* r, int k, int*C) {
+
+	nodo* temp=r;
+
+	while(k!= 1){
+		int nodiSx=r->left->n ;
+		if(nodiSx> k){
+			r=r->left;
+		}else if(nodiSx < k ){
+			k=k-nodiSx;
+			r=r->right;
+		}else
+			return r;
+		cerca2_infix(r,k,C);
+	}
+
+
+
+	return temp;
+
+}
+//POST= (restituisce il nodo k di albero(r) e in C il cammino da r fino a quel nodo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

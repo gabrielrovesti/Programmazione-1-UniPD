@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;s4es2&apos; to &apos;s4es2_StampareArray&apos;" description="Rename resource &apos;s4es2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s4es2" name="s4es2_StampareArray" stamp="1521477779906" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;s4es2_StampareArray&apos; to &apos;s4es2_StampareArrayInMatrice&apos;" description="Rename resource &apos;s4es2_StampareArray&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s4es2_StampareArray" name="s4es2_StampareArrayInMatrice" stamp="1521477789838" updateReferences="true"/>
+</session>

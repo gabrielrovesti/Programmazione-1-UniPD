@@ -1,0 +1,12 @@
+12
+
+0 1 2 3 4 5 6 7 8 9 10 2
+
+11
+
+
+
+
+#####################
+Expected Output:
+nodo:0  nodo:1  nodo:2  nodo:3  nodo:5  nodo:4  nodo:6  nodo:7  nodo:2  nodo:9  nodo:8  nodo:10 non trovato

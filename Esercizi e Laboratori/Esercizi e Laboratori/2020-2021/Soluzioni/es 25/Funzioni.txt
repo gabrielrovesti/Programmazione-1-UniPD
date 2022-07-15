@@ -1,0 +1,61 @@
+void stampa_l(nodo* r){
+    if(r) {
+        cout << r->info << '(';
+        stampa_l(r->left);
+        cout << ',';
+        stampa_l(r->right);
+        cout << ')';
+    }else
+        cout << '_';
+}
+
+nodo* insert(nodo* r, int x){
+    if(!r)    return 0;
+    if(r->info < k){
+        r->left=insert(r->left, k);
+    }
+    else
+        r->right=insert(r->right, k);
+}
+
+bool search(nodo* r, int x){
+    if(!r || !x)  return 0;
+    if(r->info == x)    return true;
+    if(r->info > x) return search(r->left, x);
+    else return search(r->right, x);
+}
+
+nodo* max(nodo* r){
+    if(!r)  return 0;
+    nodo* aux=r;
+    while(aux->right)
+    aux=aux->right;
+
+    return aux->info;
+}
+
+nodo* min(nodo* r){
+    if(!r)  return 0;
+    nodo* aux=r;
+    while(aux->left)
+    aux=aux->left;
+
+    return aux->info;
+}
+
+int altezza(nodo* r){
+    if(!r)  return -1;
+    int left=altezza(r->left);
+    int right=altezza(r->right);
+    if(!left && !right) return -1;
+    else return left+right+1;
+}
+
+int altMin(nodo* r){
+    if(!r)  return -1;
+    int left=altezza(r->left);
+    int right=altezza(r->right);
+    if(!left && !right) return -1;
+    if(left < right || !right) return left;
+    else return right;
+}

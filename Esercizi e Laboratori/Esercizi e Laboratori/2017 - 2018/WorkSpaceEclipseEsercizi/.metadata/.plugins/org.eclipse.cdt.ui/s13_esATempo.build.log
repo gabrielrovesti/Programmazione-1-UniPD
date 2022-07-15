@@ -1,0 +1,8 @@
+21:18:15 **** Incremental Build of configuration Debug for project s13_esATempo ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s13_esATempo.o" "..\\src\\s13_esATempo.cpp" 
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Code.o" "..\\src\\Code.cpp" 
+g++ -o s13_esATempo.exe "src\\Code.o" "src\\s13_esATempo.o" 
+
+21:18:16 Build Finished (took 1s.7ms)
+

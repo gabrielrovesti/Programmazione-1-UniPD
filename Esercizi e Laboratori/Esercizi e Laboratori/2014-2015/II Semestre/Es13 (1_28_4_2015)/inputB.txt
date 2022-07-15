@@ -1,0 +1,15 @@
+13
+2 3 2 3 2 3 2 2 3 0 1 2 3
+2
+2 3
+
+
+
+###########
+Expected Output:
+match n.1 a partire dalla posizione 0
+match n.2 a partire dalla posizione 2
+match n.3 a partire dalla posizione 4
+match n.3 a partire dalla posizione 7
+match n.3 a partire dalla posizione 11
+fine

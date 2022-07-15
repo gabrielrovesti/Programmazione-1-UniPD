@@ -1,0 +1,7 @@
+22:00:46 **** Rebuild of configuration Debug for project s09es2_InserimentoCrescente ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s9es2_InserimentoCrescente.o" "..\\src\\s9es2_InserimentoCrescente.cpp" 
+g++ -o s09es2_InserimentoCrescente.exe "src\\s9es2_InserimentoCrescente.o" 
+
+22:00:48 Build Finished (took 2s.275ms)
+

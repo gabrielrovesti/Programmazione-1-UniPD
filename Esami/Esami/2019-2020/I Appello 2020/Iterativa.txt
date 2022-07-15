@@ -1,0 +1,19 @@
+void H1(nodo* T, int y, int& x1, int& x2){
+	if(!T){
+		x1=x2=y;
+		return;
+	}
+	while(T){
+		if(T->info > x1)
+			if(T->info < y)
+			x1=T->info;
+			else
+			T=T->left;
+		else{
+		if(T->info < y)
+		x1=T->info;
+		else
+		T=T->left;
+		}
+	}
+}

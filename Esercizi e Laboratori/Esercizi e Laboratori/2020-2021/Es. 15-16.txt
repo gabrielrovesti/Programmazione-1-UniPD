@@ -1,0 +1,7 @@
+Es. 15
+
+Creare l'esercizio palude ma fatto ricorsivamente
+
+Es. 16
+
+Creare l'esercizio pattern matching su due array interi ma ricorsivo

@@ -1,0 +1,15 @@
+3 6 5
+4
+1  1  2  1
+
+
+
+Expected Output:
+strato 0
+1
+1
+2
+1
+strato 1
+strato 2
+fine

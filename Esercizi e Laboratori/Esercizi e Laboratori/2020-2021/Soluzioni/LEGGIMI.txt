@@ -1,0 +1,4 @@
+Le soluzioni vanno tutte quante e passano i test di Moodle e sono riprese tutte
+dalle soluzioni dei tutor.
+Si noti che le dimostrazioni di correttezza
+sono solo idee personali, si prendano al massimo come spunto.

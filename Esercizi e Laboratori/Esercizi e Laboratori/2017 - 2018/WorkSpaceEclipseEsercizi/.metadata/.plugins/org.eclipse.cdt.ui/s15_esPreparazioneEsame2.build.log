@@ -1,0 +1,7 @@
+10:46:00 **** Incremental Build of configuration Debug for project s15_esPreparazioneEsame2 ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\15_esPreparazioneEsame2.o" "..\\src\\15_esPreparazioneEsame2.cpp" 
+g++ -o s15_esPreparazioneEsame2.exe "src\\15_esPreparazioneEsame2.o" 
+
+10:46:01 Build Finished (took 1s.262ms)
+

@@ -1,0 +1,10 @@
+21:20:55 **** Incremental Build of configuration Debug for project s8es1_CercaPercorso ****
+Info: Internal Builder is used for build
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s8es1_CercaPercorso.o" "..\\src\\s8es1_CercaPercorso.cpp" 
+..\src\s8es1_CercaPercorso.cpp: In function 'int main()':
+..\src\s8es1_CercaPercorso.cpp:16:27: error: cannot convert 'bool*' to 'int*' for argument '1' to 'bool partenza(int*, int, int)'
+   bool a = partenza(N,m, 0);
+                           ^
+
+21:20:55 Build Finished (took 448ms)
+

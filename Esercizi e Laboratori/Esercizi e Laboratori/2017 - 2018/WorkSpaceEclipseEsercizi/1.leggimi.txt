@@ -1,0 +1,9 @@
+Ciao, questi sono gli esercizi che ho fatto, cioe' tutti gli esercizi dati, durante AA 17/18, solo del secondo semestre perche' quelli del primo sono facili. 
+
+Puoi usare eclipse per aprire tutta la cartella "WorkSpaceEclipseEsercizi" come workspace. 
+
+P.S ci sono due esercizi che non passano tutti i quattro test sul moodle. Non c'avevo piu' voglia. 
+
+Spero ti siano utile. 
+
+Buona fortuna. 
