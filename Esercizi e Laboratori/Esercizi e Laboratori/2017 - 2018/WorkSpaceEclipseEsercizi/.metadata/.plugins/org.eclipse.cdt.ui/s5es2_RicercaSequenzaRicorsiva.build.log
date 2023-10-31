@@ -1,7 +1,0 @@
-16:04:30 **** Rebuild of configuration Debug for project s5es2_RicercaSequenzaRicorsiva ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o RicercaRicorsiva.o "..\\RicercaRicorsiva.cpp" 
-g++ -o s5es2_RicercaSequenzaRicorsiva.exe RicercaRicorsiva.o 
-
-16:04:31 Build Finished (took 841ms)
-

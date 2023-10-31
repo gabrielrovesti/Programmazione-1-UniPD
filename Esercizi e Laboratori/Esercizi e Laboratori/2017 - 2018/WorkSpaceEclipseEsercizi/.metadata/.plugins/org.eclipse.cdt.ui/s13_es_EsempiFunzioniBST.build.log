@@ -1,8 +1,0 @@
-08:38:13 **** Rebuild of configuration Debug for project s13_es_EsempiFunzioniBST ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\BST.o" "..\\src\\BST.cpp" 
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s13_EsempiFunzioniBST.o" "..\\src\\s13_EsempiFunzioniBST.cpp" 
-g++ -o s13_es_EsempiFunzioniBST.exe "src\\BST.o" "src\\s13_EsempiFunzioniBST.o" 
-
-08:38:17 Build Finished (took 3s.355ms)
-

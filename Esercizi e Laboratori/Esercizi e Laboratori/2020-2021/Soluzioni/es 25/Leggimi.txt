@@ -1,4 +1,0 @@
-Non essendo stato corretto come si deve da parte dei tutor (a parte il file BST.h), il main è mio e, come al solito con le mie soluzioni, non vanno.
-Tutti gli altri esercizi sono corretti, perché ripresi dai tutor. 
-Sono presenti tre file poichè il programma richiedeva una compilazione separata 
-(un file .h per i prototipi e tipi, un file BST.cpp per definire le funzioni del file .h e un file main per eseguire le funzioni come un menù).

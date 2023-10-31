@@ -1,4 +1,0 @@
-questa cartella contiene varianti o sviluppi di alcuni esercizi
-alcuni possono essere utili casi di studio, o interessanti approfondimenti
-
-solitamente la modifica apportata o cosa calcola il programma è spiegato in un commento nelle prime righe.

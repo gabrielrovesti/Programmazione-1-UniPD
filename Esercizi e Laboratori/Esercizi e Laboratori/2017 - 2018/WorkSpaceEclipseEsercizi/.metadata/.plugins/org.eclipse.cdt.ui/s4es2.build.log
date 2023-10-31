@@ -1,7 +1,0 @@
-16:45:44 **** Incremental Build of configuration Debug for project s4es2 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o S4Es2.o "..\\S4Es2.cpp" 
-g++ -o s4es2.exe S4Es2.o 
-
-16:45:45 Build Finished (took 746ms)
-

@@ -1,4 +1,0 @@
-testo e main() del I appello dell'aa 2013-2014
-in preparazione per il I appello dell'aa 2014-2015
-
-Osservare che inizio_cam è già stata fatta nell'esercizio 3 del 22/5 (Es23)

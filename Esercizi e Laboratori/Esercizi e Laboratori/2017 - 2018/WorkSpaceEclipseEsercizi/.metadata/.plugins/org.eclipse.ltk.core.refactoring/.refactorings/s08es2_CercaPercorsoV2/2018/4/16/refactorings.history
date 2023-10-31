@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;s8es2_/CercaPercorsoV2&apos; to &apos;CercaPercorsoV2.cpp&apos;" description="Rename resource &apos;CercaPercorsoV2&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="CercaPercorsoV2" name="CercaPercorsoV2.cpp" stamp="1524063691899" updateReferences="true"/>
-</session>

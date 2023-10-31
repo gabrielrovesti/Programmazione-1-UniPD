@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;s3es1&apos; to &apos;s3es1_StampaMatriceParziale&apos;" description="Rename resource &apos;s3es1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s3es1" name="s3es1_StampaMatriceParziale" stamp="1520973156435" updateReferences="true"/>
-</session>

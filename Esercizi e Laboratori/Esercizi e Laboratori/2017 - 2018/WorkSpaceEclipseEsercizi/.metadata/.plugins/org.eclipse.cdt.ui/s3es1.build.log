@@ -1,7 +1,0 @@
-19:57:03 **** Incremental Build of configuration Debug for project s3es1 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o S3Es1.o "..\\S3Es1.cpp" 
-g++ -o s3es1.exe S3Es1.o 
-
-19:57:04 Build Finished (took 1s.100ms)
-

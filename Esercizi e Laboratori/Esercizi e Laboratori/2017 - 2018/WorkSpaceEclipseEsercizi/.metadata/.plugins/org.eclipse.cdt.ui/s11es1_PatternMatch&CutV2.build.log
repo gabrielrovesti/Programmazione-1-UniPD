@@ -1,7 +1,0 @@
-15:55:05 **** Incremental Build of configuration Debug for project s11es1_PatternMatch&CutV2 ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s11es1_PatternMatch&CutV2.o" "..\\src\\s11es1_PatternMatch&CutV2.cpp" 
-g++ -o s11es1_PatternMatch&CutV2.exe "src\\s11es1_PatternMatch&CutV2.o" 
-
-15:55:07 Build Finished (took 2s.405ms)
-

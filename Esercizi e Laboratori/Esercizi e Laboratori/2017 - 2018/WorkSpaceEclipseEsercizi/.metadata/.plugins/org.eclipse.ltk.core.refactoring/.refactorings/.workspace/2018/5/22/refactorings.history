@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;s13_EsempiFunzioniBST&apos; to &apos;s13_es_EsempiFunzioniBST&apos;" description="Rename resource &apos;s13_EsempiFunzioniBST&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s13_EsempiFunzioniBST" name="s13_es_EsempiFunzioniBST" stamp="1527489477783" updateReferences="true"/>
-</session>

@@ -1,7 +1,0 @@
-21:58:20 **** Rebuild of configuration Debug for project s10es3_PatternMatch&Cut ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\s10es3_.o" "..\\src\\s10es3_.cpp" 
-g++ -o s10es3_PatternMatch&Cut.exe "src\\s10es3_.o" 
-
-21:58:22 Build Finished (took 1s.769ms)
-

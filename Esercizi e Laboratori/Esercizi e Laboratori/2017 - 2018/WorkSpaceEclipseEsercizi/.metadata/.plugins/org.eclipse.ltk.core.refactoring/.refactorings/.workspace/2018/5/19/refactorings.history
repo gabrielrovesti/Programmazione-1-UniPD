@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;s10es3_&apos; to &apos;s10es3_PatternMatch&amp;Cut&apos;" description="Rename resource &apos;s10es3_&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s10es3_" name="s10es3_PatternMatch&amp;Cut" stamp="1525763477671" updateReferences="true"/>&#x0A;&#x0A;<refactoring comment="Delete resource &apos;s11_es_SvoltiInClasseDaProf&apos;" deleteContents="true" description="Delete resource &apos;s11_es_SvoltiInClasseDaProf&apos;" element1="/s11_es_SvoltiInClasseDaProf" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1525858389743"/>
-</session>

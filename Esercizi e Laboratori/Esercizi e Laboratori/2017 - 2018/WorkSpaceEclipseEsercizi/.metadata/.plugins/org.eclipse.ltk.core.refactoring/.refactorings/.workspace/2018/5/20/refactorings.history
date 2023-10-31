@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;s12_es0_PDF&apos; to &apos;s12es0_PDF&apos;" description="Rename resource &apos;s12_es0_PDF&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/s12_es0_PDF" name="s12es0_PDF" stamp="1526285223594" updateReferences="true"/>
-</session>

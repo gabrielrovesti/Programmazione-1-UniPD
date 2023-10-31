@@ -1,7 +1,0 @@
-16:23:29 **** Incremental Build of configuration Debug for project s1es3_EliminaDuplicati ****
-Info: Internal Builder is used for build
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o EliminaDuplicati.o "..\\EliminaDuplicati.cpp" 
-g++ -o s1es3_EliminaDuplicati.exe EliminaDuplicati.o 
-
-16:23:30 Build Finished (took 823ms)
-
